@@ -19,7 +19,6 @@ const App = () => {
     }
   }, [todos]);
   
-  // Add the handlesubmit code here
   function handlesubmit(e) {
     e.preventDefault();
 
@@ -37,14 +36,12 @@ const App = () => {
     }
     document.getElementById('todoAdd').value = ""
   }
-  
-  // Add the deleteToDo code here
+
   function deleteTodo(id) {
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   }
   
-  // Add the toggleComplete code here
   function toggleComplete(id) {
     let updatedTodos = [...todos].map((todo) => {
         if (todo.id === id) {
@@ -55,7 +52,6 @@ const App = () => {
     setTodos(updatedTodos);
   }
   
-  // Add the submitEdits code here
   function submitEdits(newtodo) {
     const updatedTodos = [...todos].map((todo) => {
         if (todo.id === newtodo.id) {
